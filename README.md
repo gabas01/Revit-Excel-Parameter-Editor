@@ -54,7 +54,3 @@ This project was built with C# using .NET Framework 4.8 and the Revit 2025 API.
 3.  The `RevitAPI.dll` and `RevitAPIUI.dll` references might need to be re-pathed. Point them to the corresponding files in your Revit installation directory.
 4.  The `EPPlus` library dependency can be restored via NuGet Package Manager.
 5.  Build the project.
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
