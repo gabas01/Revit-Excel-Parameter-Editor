@@ -1,60 +1,60 @@
 # Revit Excel Parameter Editor
 
-![GitHub repo size](https://img.shields.io/github/repo-size/SEU-USUARIO/Revit-Excel-Parameter-Editor?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/SEU-USUARIO/Revit-Excel-Parameter-Editor?style=for-the-badge)
-![GitHub top language](https://img.shields.io/github/languages/top/SEU-USUARIO/Revit-Excel-Parameter-Editor?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/SEU-USUARIO/Revit-Excel-Parameter-Editor?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/YOUR-USERNAME/Revit-Excel-Parameter-Editor?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/YOUR-USERNAME/Revit-Excel-Parameter-Editor?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/YOUR-USERNAME/Revit-Excel-Parameter-Editor?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/YOUR-USERNAME/Revit-Excel-Parameter-Editor?style=for-the-badge)
 
-Plugin para Autodesk Revit que permite a edição de parâmetros de elementos em massa através da exportação e importação de tabelas (schedules) com o Microsoft Excel.
+An Autodesk Revit plugin that enables bulk editing of element parameters by exporting and re-importing schedules with Microsoft Excel.
 
-![Demonstração do Plugin](https://i.imgur.com/your-image-url.gif)  
-*(Sugestão: Grave um GIF curto da tela mostrando o plugin em ação e substitua o link acima)*
+![Plugin Demo](https://i.imgur.com/your-image-url.gif)  
+*(Suggestion: Record a short screen GIF showing the plugin in action and replace the link above)*
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-* **Interface Intuitiva:** Uma janela simples e direta dentro do Revit.
-* **Seleção de Tabelas:** Carrega automaticamente todas as tabelas (schedules) do seu projeto em uma lista.
-* **Exportação Segura:** Exporta os dados da tabela para um arquivo `.xlsx`, garantindo que o `ElementID` de cada objeto seja incluído para uma importação sem erros.
-* **Importação Inteligente:** Lê o arquivo Excel, identifica os elementos pelo `ElementID` e atualiza apenas os parâmetros modificados.
-* **Transações Seguras:** Todas as modificações são feitas dentro de uma única transação do Revit, permitindo que a operação inteira seja desfeita (`Undo`) com um único clique.
+* **Intuitive UI:** A simple and straightforward window inside Revit.
+* **Schedule Selection:** Automatically loads all project schedules into a dropdown list.
+* **Safe Export:** Exports schedule data to an `.xlsx` file, ensuring each object's `ElementID` is included for error-free re-importing.
+* **Smart Import:** Reads the Excel file, identifies elements by their `ElementID`, and updates only the modified parameters.
+* **Safe Transactions:** All modifications are wrapped in a single Revit transaction, allowing the entire operation to be undone with a single click.
 
-## 📦 Instalação (Para Usuários)
+## 📦 Installation (For Users)
 
-1.  Vá para a página de [**Releases**](https://github.com/SEU-USUARIO/Revit-Excel-Parameter-Editor/releases) deste repositório.
-2.  Baixe o arquivo `.zip` da versão mais recente.
-3.  Descompacte o arquivo. Você encontrará dois itens principais:
-    * A pasta `RevitParameterEditor.bundle` (ou os arquivos `RevitParameterEditor.dll` e `RevitParameterEditor.addin`).
-4.  Copie a pasta `RevitParameterEditor.bundle` para a pasta de Add-ins do Revit. O caminho é:
-    * `C:\Users\SEU-USUARIO\AppData\Roaming\Autodesk\Revit\Addins\[VERSÃO-DO-REVIT]\`
-5.  Inicie o Autodesk Revit. O plugin estará disponível na aba **Suplementos (Add-Ins)**.
+1.  Go to the [**Releases**](https://github.com/YOUR-USERNAME/Revit-Excel-Parameter-Editor/releases) page of this repository.
+2.  Download the `.zip` file from the latest version.
+3.  Unzip the file. You will find the main items inside:
+    * The `RevitParameterEditor.bundle` folder (or the `RevitParameterEditor.dll` and `RevitParameterEditor.addin` files).
+4.  Copy the `RevitParameterEditor.bundle` folder to the Revit Add-ins folder. The path is typically:
+    * `C:\Users\YOUR-USERNAME\AppData\Roaming\Autodesk\Revit\Addins\[REVIT-VERSION]\`
+5.  Start Autodesk Revit. The plugin will be available in the **Add-Ins** tab.
 
-## 📋 Como Usar
+## 📋 How to Use
 
-1.  Com seu projeto aberto no Revit, vá para a aba **Suplementos (Add-Ins)**.
-2.  Clique no botão **"Editor de Parâmetros"**.
-3.  Na janela do plugin, selecione a tabela que deseja editar na lista.
-4.  Clique em **"Exportar para Excel"** e salve o arquivo `.xlsx`.
-5.  Abra o arquivo no Excel. **Não modifique a coluna `ElementID`!** Edite os valores nas outras colunas de parâmetros conforme necessário.
-6.  Salve suas alterações no Excel.
-7.  Volte para o Revit, na janela do plugin, e clique em **"Importar do Excel e Atualizar"**.
-8.  Selecione o arquivo Excel que você acabou de modificar.
-9.  Uma mensagem de sucesso aparecerá informando quantos elementos foram atualizados. Suas alterações agora estão no modelo do Revit!
+1.  With your project open in Revit, go to the **Add-Ins** tab.
+2.  Click the **"Parameter Editor"** button.
+3.  In the plugin window, select the schedule you want to edit from the list.
+4.  Click **"Export to Excel"** and save the `.xlsx` file.
+5.  Open the file in Excel. **Do not modify the `ElementID` column!** Edit the values in the other parameter columns as needed.
+6.  Save your changes in Excel.
+7.  Go back to the plugin window in Revit and click **"Import from Excel & Update"**.
+8.  Select the Excel file you just modified.
+9.  A success message will appear, telling you how many elements were updated. Your changes are now live in the Revit model!
 
-## ⚙️ Para Desenvolvedores
+## ⚙️ For Developers
 
-Este projeto foi criado com C# usando o .NET Framework 4.8 e a API do Revit 2025.
+This project was built with C# using .NET Framework 4.8 and the Revit 2025 API.
 
-1.  Clone o repositório:
+1.  Clone the repository:
     ```bash
-    git clone [https://github.com/SEU-USUARIO/Revit-Excel-Parameter-Editor.git](https://github.com/SEU-USUARIO/Revit-Excel-Parameter-Editor.git)
+    git clone [https://github.com/YOUR-USERNAME/Revit-Excel-Parameter-Editor.git](https://github.com/YOUR-USERNAME/Revit-Excel-Parameter-Editor.git)
     ```
-2.  Abra o arquivo de solução (`.sln`) no Visual Studio.
-3.  As referências `RevitAPI.dll` e `RevitAPIUI.dll` podem precisar ser realocadas. Aponte-as para os arquivos correspondentes na sua pasta de instalação do Revit.
-4.  A dependência da biblioteca `EPPlus` pode ser restaurada via NuGet.
-5.  Compile o projeto (Build).
+2.  Open the solution file (`.sln`) in Visual Studio.
+3.  The `RevitAPI.dll` and `RevitAPIUI.dll` references might need to be re-pathed. Point them to the corresponding files in your Revit installation directory.
+4.  The `EPPlus` library dependency can be restored via NuGet Package Manager.
+5.  Build the project.
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
